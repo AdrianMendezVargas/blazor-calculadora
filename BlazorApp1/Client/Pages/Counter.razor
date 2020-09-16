@@ -1,0 +1,44 @@
+﻿@page "/counter"
+
+
+<h1>Counter</h1>
+
+<div>
+
+    Primer numero<input type="number" @bind="N1" /><br />
+    Segundo numero<input type="number" @bind="N2" /><br />
+
+</div>
+
+<p>Suma: @suma</p>
+<br />
+<p>Resta: @resta</p>
+<br />
+<p>Multiplicacion: @mult</p>
+<br />
+<p>Divicion: @div</p>
+<br />
+
+
+
+<button class="btn btn-primary" @onclick="Resolver">Click me</button>
+
+@code {
+
+
+    public int N1 { get; set; }
+    public int N2 { get; set; }
+
+    public int suma { get; set; }
+    public int resta { get; set; }
+    public int mult { get; set; }
+    public decimal div { get; set; }
+
+
+    private void Resolver() {
+        suma = N1 + N2;
+        resta = N1 - N2;
+        mult = N1 * N2;
+        div = N1 * N2;
+    }
+}
